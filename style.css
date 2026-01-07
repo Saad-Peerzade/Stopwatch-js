@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Page Background */
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* Title */
+#myH1{
+    color:#fff;
+    font-size:clamp(32px,5vw,48px);
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+/* Main Card */
+#containers{
+    width:100%;
+    max-width:420px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:clamp(25px,5vw,40px);
+    box-shadow:0 30px 60px rgba(0,0,0,0.5);
+    text-align:center;
+}
+
+/* Time Display */
+#display{
+    color:#00fff0;
+    font-size:clamp(38px,8vw,64px);
+    letter-spacing:0.2em;
+    margin-bottom:25px;
+    text-shadow:0 0 15px rgba(0,255,240,0.7),
+                0 0 35px rgba(0,255,240,0.5);
+}
+
+/* Buttons */
+#controls{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+#controls button{
+    flex:1;
+    min-width:100px;
+    padding:12px 18px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s ease;
+    color:white;
+}
+
+/* Button Colors */
+#StartBtn{background:#00c853;}
+#StopBtn{background:#ff1744;}
+#RestartBtn{background:#2979ff;}
+
+/* Hover / Tap Effects */
+#controls button:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* Extra small phones */
+@media(max-width:360px){
+    #controls button{
+        min-width:85px;
+        font-size:14px;
+    }
+}
